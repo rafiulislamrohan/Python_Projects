@@ -1,0 +1,3 @@
+import qrcode as qr
+img= qr.make("https://rafiulislamrohan.github.io/rafiulislam")
+img.save("Rafiul_Islam.png")
