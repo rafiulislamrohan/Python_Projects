@@ -1,0 +1,15 @@
+#Install modules -> qrcode , pillow
+
+import qrcode
+import PIL
+
+qr = qrcode.QRCode(version=1,
+                    error_correction=qrcode.constants.ERROR_CORRECT_H,
+                    box_size=100, border=1)
+
+qr.add_data("https://rafiulislamrohan.github.io/rafiulislam")
+
+qr.make(fit=True)
+img = qr.make_image(fill_color="#90EE90", back_color="black")
+
+img.save("Rafiul_Islam.png")
